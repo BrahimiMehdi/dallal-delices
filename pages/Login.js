@@ -28,11 +28,11 @@ const Login = () => {
           <link rel="icon" href="/favicon.ico" />
         </Head>
       <div className="h-full w-full absolute top-0 bottom-0 left-0 right-0">
-      <Image className="w-full h-full object-cover object-center" layout="fill" width={6000} height={4000} src={require("../public/bgLogin.jpg").default} alt="backgroundimage" />
+      <Image className="w-full h-full object-cover object-center" layout="fill" width={6000} height={4000} src={"/bgLogin.jpg"} alt="backgroundimage" />
 
       </div>
       <div className="flex z-10 justify-between h-[250px] items-center flex-col">
-        <Image className="w-[150px]" width={150} height={150} src={require("../public/Logo.png").default} alt="Logo" />
+        <Image className="w-[150px]" width={150} height={150} src={"/Logo.png"} alt="Logo" />
         {status==="authenticated" ? (
           <div
             className="flex flex-col items-center justify-between"
