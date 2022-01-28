@@ -1,16 +1,21 @@
 import { useSession, signIn } from "next-auth/react";
 import Head from "next/head";
 import Link from "next/link";
-import { RecipeCard, SideBar, Header } from "../../components";
-import { useEffect, useState } from "react";
+import { useEffect,useRef ,useState } from "react";
 import { client } from "../../client";
 import { userQuery } from "../../services";
 import { CgArrowLeftO } from "react-icons/cg";
-
+import {gsap,Power3} from "gsap"
 export default function RecipeDetails({ recipe }) {
   const { data: session, status } = useSession();
   const [user, setUser] = useState(null);
-
+  const dishContainer = useRef()
+  const mainContent = useRef()
+  const tl = gsap.timeline()
+  useEffect(() => {
+    tl.from(dishContainer.current,{y:"-100%",duration:3,ease:Power3.easeOut},0.3)
+      .from(mainContent.current,{opacity:0,duration:1,ease:Power3.easeOut},1)
+  }, [])
   useEffect(() => {
     if (session?.error === "RefreshAccessTokenError") {
       signIn();
@@ -53,8 +58,8 @@ export default function RecipeDetails({ recipe }) {
           />
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        <section className="min-h-screen max-h-[1200px] lg:h-screen px-4 lg:pl-4 pb-4 max-w-screen grid-rows-2 grid grid-cols-1 lg:grid-cols-12   bg-white-texutre bg-contain  lg:grid-rows-1">
-          <div className="h-full overflow-hidden relative bg-[#252525] w-full px-4 pb-8 z-10 bg-cover rounded-b-3xl shadow-2xl  lg:col-span-3  flex flex-col">
+        <section className="min-h-screen max-h-[1200px] lg:h-screen  px-4 lg:pl-4 pb-4 max-w-screen grid-rows-2 grid grid-cols-1 lg:grid-cols-12   bg-white-texutre bg-contain  lg:grid-rows-1">
+          <div ref={dishContainer} className="h-full overflow-hidden relative bg-[#252525] w-full px-4 pb-8 z-10 bg-cover rounded-b-3xl shadow-2xl  lg:col-span-3  flex flex-col">
             <Link className="z-10 h-[50px]" href="/recipes">
               <CgArrowLeftO className="text-2xl transition-all duration-200 cursor-pointer md:hover:scale-105 md:active:scale-95 h-[150px] z-10 text-mainLight" />
             </Link>
@@ -78,7 +83,7 @@ export default function RecipeDetails({ recipe }) {
               </ul>
             </div>
           </div>
-          <div className="lg:col-span-9 py-8   flex lg:px-20 flex-col justify-around h-full w-full">
+          <div ref={mainContent} className="lg:col-span-9 py-8   flex lg:px-20 flex-col justify-around h-full w-full">
             <h1 className="text-5xl text-mainDark mb-8 font-bold capitalize">
               {recipe.title}
             </h1>

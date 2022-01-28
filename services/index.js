@@ -1,10 +1,10 @@
-
+import groq from "groq";
 export const userQuery = (userId) => {
-  const query = `*[_type == "user" && _id=='${userId}']`;
+  const query = groq `*[_type == "user" && _id=='${userId}']`;
   return query
 };
 export const getLatestRecipes = () => {
-  const query = `*[_type == "recipe" ] | order(_createdAt desc){
+  const query = groq`*[_type == "recipe" ] | order(_createdAt desc){
     slug,
     title,
     category,
@@ -19,7 +19,7 @@ export const getLatestRecipes = () => {
 
 
 export const getAllRecipes = () => {
-  const query = `*[_type == "recipe" ] | order(_createdAt desc){
+  const query = groq`*[_type == "recipe" ] | order(_createdAt desc){
         slug,
         title,
         category,
