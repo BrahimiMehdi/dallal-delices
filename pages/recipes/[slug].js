@@ -53,13 +53,13 @@ export default function RecipeDetails({ recipe }) {
           />
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        <section className="h-screen pl-4 pb-4 max-w-screen grid grid-cols-12   bg-white-texutre bg-contain  grid-rows-1">
-          <div className="h-full overflow-hidden relative bg-[#252525] w-full py-2 px-4 pb-8 z-10 bg-cover rounded-b-3xl shadow-2xl  col-span-3  flex flex-col">
+        <section className="min-h-screen max-h-[1200px] lg:h-screen px-4 lg:pl-4 pb-4 max-w-screen grid-rows-2 grid grid-cols-1 lg:grid-cols-12   bg-white-texutre bg-contain  lg:grid-rows-1">
+          <div className="h-full overflow-hidden relative bg-[#252525] w-full px-4 pb-8 z-10 bg-cover rounded-b-3xl shadow-2xl  lg:col-span-3  flex flex-col">
             <Link className="z-10 h-[50px]" href="/recipes">
               <CgArrowLeftO className="text-2xl transition-all duration-200 cursor-pointer md:hover:scale-105 md:active:scale-95 h-[150px] z-10 text-mainLight" />
             </Link>
             <img
-              className="w-full z-10 rounded-xl shadow-md object-cover object-center h-[300px]"
+              className="w-full z-10 rounded-xl shadow-md object-cover object-center mb-4 h-[250px] lg:h-[300px]"
               src={recipe.imageUrl}
               alt={recipe.title}
             />
@@ -70,7 +70,7 @@ export default function RecipeDetails({ recipe }) {
               <ul className="flex flex-col w-full h-full">
                 {recipe.ingredients.map((ingredient) => {
                   return (
-                    <li className="text-xl font-light leading-12 mt-4 list-decimal text-mainLight">
+                    <li className="text-xl font-light leading-12 mt-4 list-disc text-mainLight">
                       <p>{ingredient}</p>
                     </li>
                   );
@@ -78,7 +78,7 @@ export default function RecipeDetails({ recipe }) {
               </ul>
             </div>
           </div>
-          <div className="col-span-9 py-8   flex px-20 flex-col justify-around h-full w-full">
+          <div className="lg:col-span-9 py-8   flex lg:px-20 flex-col justify-around h-full w-full">
             <h1 className="text-5xl text-mainDark mb-8 font-bold capitalize">
               {recipe.title}
             </h1>
