@@ -31,10 +31,10 @@ const Login = () => {
         <video
           src="/bgVid.mp4"
           type="video/mp4"
-          autoPlay
+          autoPlay={true}
           controls={false}
-          loop
-          muted
+          loop={true}
+          muted={true}
           className="h-full w-full object-cover object-center"
         />
       </div>
