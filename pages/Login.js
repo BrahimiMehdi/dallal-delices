@@ -2,11 +2,11 @@ import { getProviders, signIn, useSession } from "next-auth/react";
 import Head from "next/head";
 import { FcGoogle } from "react-icons/fc";
 import {AiOutlineHome} from "react-icons/ai"
-
+import Image from "next/image";
 import Link from "next/link";
 const Login = () => {
   const {data:session,status } = useSession();
-
+ 
   return (
     <main className="h-screen w-screen relative grid place-items-center ">
       <Head>
@@ -28,18 +28,11 @@ const Login = () => {
           <link rel="icon" href="/favicon.ico" />
         </Head>
       <div className="h-full w-full absolute top-0 bottom-0 left-0 right-0">
-        <video
-          src="/bgVid.mp4"
-          type="video/mp4"
-          autoPlay={true}
-          controls={false}
-          loop={true}
-          muted={true}
-          className="h-full w-full object-cover object-center"
-        />
+      <Image className="w-full h-full object-cover object-center" layout="fill" width={6000} height={4000} src={require("../public/bgLogin.jpg").default} alt="backgroundimage" />
+
       </div>
       <div className="flex z-10 justify-between h-[250px] items-center flex-col">
-        <img className="w-[150px]" src="/Logo.png" alt="" />
+        <Image className="w-[150px]" width={150} height={150} src={require("../public/Logo.png").default} alt="Logo" />
         {status==="authenticated" ? (
           <div
             className="flex flex-col items-center justify-between"
@@ -74,7 +67,9 @@ const Login = () => {
           
         )}
       </div>
-      <div className="bg-[rgba(0,0,0,0.6)] absolute top-0 bottom-0 left-0 right-0"></div>
+      <div className="bg-[rgba(0,0,0,0.6)] absolute top-0 bottom-0 left-0 right-0">
+      
+      </div>
     </main>
   );
 };
