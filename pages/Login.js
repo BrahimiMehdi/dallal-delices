@@ -4,7 +4,7 @@ import { FcGoogle } from "react-icons/fc";
 import {AiOutlineHome} from "react-icons/ai"
 
 import Link from "next/link";
-const Login = ({ providers }) => {
+const Login = () => {
   const {data:session,status } = useSession();
 
   return (
@@ -56,21 +56,22 @@ const Login = ({ providers }) => {
             </Link>
           </div>
         ) : (
-          Object.values(providers).map((provider) => (
+
             <div
-              key={provider.name}
+              key="Google"
               className="flex items-center justify-between"
             >
+
               <button
-                onClick={() => signIn(provider.id, { callbackUrl: "/" })}
+                onClick={() => signIn("google", { callbackUrl: "/" })}
                 type="button"
                 className="text-mainDark transition-all md:active:scale-95 shadow-lg duration-300 md:hover:-translate-y-2 bg-white px-8 py-2 rounded-lg items-center flex justify-between"
               >
                 {" "}
-                <FcGoogle /> Login With {provider.name}
+                <FcGoogle /> Login With {"Google"}
               </button>
             </div>
-          ))
+          
         )}
       </div>
       <div className="bg-[rgba(0,0,0,0.6)] absolute top-0 bottom-0 left-0 right-0"></div>
@@ -80,11 +81,4 @@ const Login = ({ providers }) => {
 
 export default Login;
 
-export async function getServerSideProps() {
-  const providers = await getProviders();
-  return {
-    props: {
-      providers,
-    },
-  };
-}
+
