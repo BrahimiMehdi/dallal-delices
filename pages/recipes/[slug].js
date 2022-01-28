@@ -73,9 +73,9 @@ export default function RecipeDetails({ recipe }) {
             </h1>
             <div className="h-full z-10 pl-12 py-8 overflow-y-scroll border-4 border-secondary-purple border-dotted  pr-2 mt-2 rounded-xl scrollbar-hide">
               <ul className="flex flex-col w-full h-full">
-                {recipe.ingredients.map((ingredient) => {
+                {recipe.ingredients.map((ingredient,index) => {
                   return (
-                    <li className="text-xl font-light leading-12 mt-4 list-disc text-mainLight">
+                    <li key={index} className="text-xl font-light leading-12 mt-4 list-disc text-mainLight">
                       <p>{ingredient}</p>
                     </li>
                   );
