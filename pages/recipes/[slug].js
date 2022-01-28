@@ -84,10 +84,10 @@ export default function RecipeDetails({ recipe }) {
             </div>
           </div>
           <div ref={mainContent} className="lg:col-span-9 py-8   flex lg:px-20 flex-col justify-around h-full w-full">
-            <h1 className="text-5xl text-mainDark mb-8 font-bold capitalize">
+            <h1 className="text-4xl sm:text-5xl text-mainDark mb-8 font-bold capitalize">
               {recipe.title}
             </h1>
-            <p className="text-2xl overflow-y-scroll leading-10 border-mainDark border-2 border-dashed rounded-xl px-4 py-8 scrollbar-hide text-mainDark">
+            <p className="text-2xl overflow-y-scroll whitespace-pre-wrap leading-10 border-mainDark border-2 border-dashed rounded-xl px-4 py-8 scrollbar-hide text-mainDark">
               {recipe.about}
             </p>
           </div>

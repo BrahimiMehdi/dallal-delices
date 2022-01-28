@@ -102,7 +102,7 @@ export default function Recipes({ recipes }) {
   );
 }
 const getReceps = getAllRecipes();
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const recipes = await client.fetch(getReceps);
   return {
     props: { recipes },
