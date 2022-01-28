@@ -16,7 +16,7 @@ const HeroSection = () => {
   
   return (
     <section id="heroSection" className="min-h-screen overflow-hidden scrollbar-hide bg-white-texutre grid place-items-center bg-cover sm:bg-contain bg-center max-w-screen">
-      <div className="grid grid-cols-1 grid-rows-2 sm:grid-rows-1 sm:grid-cols-2 w-[100%]  pl-8 max-h-full  ">
+      <div className="grid grid-cols-1 grid-rows-2 sm:grid-rows-1 sm:grid-cols-2 w-[100%]  sm:pl-8 max-h-full  ">
         <div ref={mainContent} className="h-full p-4 pt-20 pb-20 lg:pt-12 w-full flex flex-col justify-between sm:items-start items-center">
           <span   className="text-mainDark text-center sm:text-left leading-[34px] text-4xl sm:leading-[40px] md:leading-[50px] lg:leading-[64px] lg:text-6xl md:text-5xl sm:text-4xl font-semibold">
             All the recipes <br /> you'll{" "}
