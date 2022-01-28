@@ -14,7 +14,7 @@ const SideBar = ({ user, navState, changeNav }) => {
       } justify-end items-center`}
     >
       <aside
-        className={`flex fixed  flex-col w-[200px] z-30 sm:w-[300px] md:w-[350px] bg-white-texutre px-8 py-4 h-screen rounded-l-2xl justify-between items-center transition-all duration-500 ${
+        className={`flex fixed  flex-col w-[200px] z-30 sm:w-[300px] md:w-[350px] bg-mainLight sm:bg-white-texutre px-8 py-4 h-screen rounded-l-2xl justify-between items-center transition-all duration-500 ${
           navState ? "translate-x-0" : " translate-x-[100%]"
         } `}
       >
