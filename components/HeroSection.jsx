@@ -17,7 +17,7 @@ const HeroSection = () => {
   return (
     <section id="heroSection" className="min-h-screen overflow-hidden scrollbar-hide bg-white-texutre grid place-items-center bg-cover sm:bg-contain bg-center max-w-screen">
       <div className="grid grid-cols-1 grid-rows-2 sm:grid-rows-1 sm:grid-cols-2 w-[100%]  pl-8 max-h-full  ">
-        <div ref={mainContent} className="h-full p-4 pt-12 w-full flex flex-col justify-between sm:items-start items-center">
+        <div ref={mainContent} className="h-full p-4 pt-20 pb-20 lg:pt-12 w-full flex flex-col justify-between sm:items-start items-center">
           <span   className="text-mainDark text-center sm:text-left leading-[34px] text-4xl sm:leading-[40px] md:leading-[50px] lg:leading-[64px] lg:text-6xl md:text-5xl sm:text-4xl font-semibold">
             All the recipes <br /> you'll{" "}
             <h1 className="text-mainPink inline-block">ever </h1> need
@@ -39,7 +39,7 @@ const HeroSection = () => {
             </LinkS>
           </div>
         </div>
-        <div ref={dishContainer} className="h-full rounded-b-full border-b-8 border-t-2 border-l-2 shadow-2xl bg-mainPink bg-opacity-80  grid place-items-center w-full">
+        <div ref={dishContainer} className="h-[30%] sm:h-full sm:rounded-b-full sm:border-b-8 sm:border-t-2 sm:border-l-2 sm:shadow-2xl sm:bg-mainPink bg-opacity-80  grid place-items-center w-full">
           <img
             ref={dish}
             className="sm:w-[80%] h-full object-contain  object-center"
