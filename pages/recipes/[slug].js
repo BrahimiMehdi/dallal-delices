@@ -90,7 +90,7 @@ export default function RecipeDetails({ recipe }) {
               {recipe.title}
             </h1>
             <div className="h-full pb-4 border-mainDark border-4 pl-2 pr-4 rounded-xl overflow-hidden border-dotted">
-            <p className="h-full lg:text-xl overflow-x-hidden scrollbar scrollbar-track-mainLight scrollbar-thin scrollbar-thumb-mainDark  z-10  pr-4 mt-2 rounded-xl text-lg overflow-y-scroll whitespace-pre-wrap lg:leading-10 leading-10 text-mainDark">
+            <p className="h-full lg:text-xl text-sm overflow-x-hidden scrollbar scrollbar-track-mainLight scrollbar-thin scrollbar-thumb-mainDark  z-10  pr-4 mt-2 rounded-xl  overflow-y-scroll whitespace-pre-wrap lg:leading-10 leading-10 text-mainDark">
               {recipe.about}
             </p>
             </div>

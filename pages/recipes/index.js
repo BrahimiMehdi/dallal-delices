@@ -72,9 +72,10 @@ export default function Recipes({ recipes }) {
         >
           <div className="min-h-full z-10 w-[90%] place-items-center pb-8 pt-4 grid grid-rows-6 lg:grid-rows-4 grid-cols-1">
             <span className="text-5xl mt-4 sm:text-6xl row-span-1 font-semibold text-mainLight text-center">
-              Find your{" "}
-              <h1 className="text-mainPink inline-block">favourite</h1>{" "}
-              recipe
+              
+              Trouver vos  {" "}
+              <h1 className="text-mainPink inline-block">recettes</h1>{" "}
+              préférées
             </span>
             <div className="max-h-full gap-8 w-full row-span-5 lg:row-span-3 lg:flex-row lg:flex-wrap flex-col flex justify-center items-center lg:justify-around">
               {recipes.map((recipe, index) => {

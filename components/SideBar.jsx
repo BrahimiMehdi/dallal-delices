@@ -42,7 +42,7 @@ const SideBar = ({ user, navState, changeNav }) => {
             <div className="h-[250px] w-full flex flex-col flex-grow justify-start"> 
               <Link href="/recipes">
                 <span className="inline cursor-pointer border-b-2 border-mainPink transition-all duration-200 md:hover:-translate-y-1 rounded-lg py-2 font-semibold capitalize text-center text-2xl"> 
-                  recipes
+                  recettes
                 </span>
               </Link>
             </div>
