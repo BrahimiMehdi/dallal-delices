@@ -76,7 +76,7 @@ export default function RecipeDetails({ recipe }) {
               <ul className="flex flex-col w-full h-full">
                 {recipe.ingredients.map((ingredient,index) => {
                   return (
-                    <li key={index} className="text-xl font-light leading-12 mt-4 list-disc text-mainLight">
+                    <li key={index} className="text-sm lg:text-lg font-light leading-12 mt-4 list-disc text-mainLight">
                       {ingredient}
                     </li>
                   );
@@ -90,7 +90,7 @@ export default function RecipeDetails({ recipe }) {
               {recipe.title}
             </h1>
             <div className="h-full pb-4 border-mainDark border-4 pl-2 pr-4 rounded-xl overflow-hidden border-dotted">
-            <p className="h-full overflow-x-hidden scrollbar scrollbar-track-mainLight scrollbar-thin scrollbar-thumb-mainDark  z-10  pr-4 mt-2 rounded-xl text-xl overflow-y-scroll whitespace-pre-wrap leading-10 text-mainDark">
+            <p className="h-full lg:text-xl overflow-x-hidden scrollbar scrollbar-track-mainLight scrollbar-thin scrollbar-thumb-mainDark  z-10  pr-4 mt-2 rounded-xl text-lg overflow-y-scroll whitespace-pre-wrap lg:leading-10 leading-10 text-mainDark">
               {recipe.about}
             </p>
             </div>
