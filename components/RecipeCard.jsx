@@ -2,23 +2,21 @@ import React from "react";
 import Image from "next/image";
 
 import Link from "next/link";
-
+import {getImageDimensions} from '@sanity/asset-utils'
 
 
 
 const RecipeCard = ({ recipe }) => {
-  
-
-  
-  
-  
-
+  const imageDimensions = getImageDimensions(recipe.imageUrl)
   
   return (
     <div className="max-h-[400px] mb-2 pb-4 w-[90%] sm:w-[80%] lg:w-[300px] px-4 flex mt-4 justify-around flex-col pt-4 bg-mainLight rounded-2xl shadow-xl">
 
-      <img
-        className="rounded-xl object-cover h-[250px] w-full"
+      <Image
+        width={imageDimensions.width}
+        height={imageDimensions.height}
+        layout="responsive"
+        className="rounded-xl object-cover h-[250px] "
         src={recipe.imageUrl}
         alt={recipe.title}
       />
