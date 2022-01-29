@@ -42,7 +42,7 @@ export default function Home({ recipes }) {
   
   if (status === "authenticated") {
     return (
-      <main className="min-h-screen max-w-screen flex flex-col">
+      <main className="min-h-screen max-w-screen bg-white-texutre bg-cover bg-center flex flex-col">
         <Head>
           <title>dallal delices</title>
           <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -67,13 +67,13 @@ export default function Home({ recipes }) {
         <Header navState={navState} setNavState={changeNav} />
         <section
           name="/recipesSection"
-          className="min-h-screen overflow-hidden bg-white-texutre relative pt-8  grid place-items-center bg-cover sm:bg-contain bg-center max-w-screen"
+          className="min-h-screen overflow-hidden  relative pt-8  grid place-items-center  max-w-screen"
         >
-          <div className="min-h-full z-10 w-[90%] pb-8 pt-4 grid grid-rows-6 lg:grid-rows-4 grid-cols-1">
+          <div className="min-h-full  z-10 w-[90%] pb-8 pt-4 grid grid-rows-6 lg:grid-rows-4 grid-cols-1">
             <span className="text-5xl sm:text-6xl row-span-1 font-semibold text-mainLight text-center">
-              Find your{" "}
-              <h1 className="text-secondary-purple inline-block">favourite</h1>{" "}
-              recipe
+            Recettes récentes de {" "}
+              <h1 className="text-secondary-purple inline-block">Dallal</h1>{" "}
+              
             </span>
             <div className="max-h-full w-full row-span-5 lg:row-span-3 lg:flex-row flex-col flex justify-center items-center lg:justify-between">
               {recipes.map((recipe, index) => {
@@ -88,17 +88,13 @@ export default function Home({ recipes }) {
   }
   if (status === "loading") {
     return (
-      <main className="min-h-screen max-w-screen bg-white-texutre grid place-items-center">
-        <h1 className="text-5xl text-center text-mainDark">Loading...</h1>
+      <main className="min-h-screen max-w-screen bg-Dark grid place-items-center">
+        <h1 className="text-5xl text-center text-mainLight">Loading...</h1>
       </main>
     );
   }
 
-  return (
-    <main className=" bg-white-texutre h-screen w-screen grid place-items-center">
-      {signIn()}
-    </main>
-  );
+
 }
 const getReceps = getLatestRecipes();
 export async function getStaticProps() {

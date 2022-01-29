@@ -15,16 +15,15 @@ const HeroSection = () => {
   }, []);
   
   return (
-    <section id="heroSection" className="min-h-screen overflow-hidden scrollbar-hide bg-white-texutre grid place-items-center bg-cover sm:bg-contain bg-center max-w-screen">
-      <div className="grid grid-cols-1 grid-rows-2 sm:grid-rows-1 sm:grid-cols-2 w-[100%]  sm:pl-8 max-h-full  ">
+    <section id="heroSection" className="min-h-screen overflow-hidden scrollbar-hide grid place-items-center max-w-screen">
+      <div className="grid grid-cols-1  grid-rows-2 sm:grid-rows-1 sm:grid-cols-2 w-[100%]  sm:pl-8 max-h-full  ">
         <div ref={mainContent} className="h-full p-4 pt-20 pb-20 lg:pt-12 w-full flex flex-col justify-between sm:items-start items-center">
-          <span   className="text-mainDark text-center sm:text-left leading-[34px] text-4xl sm:leading-[40px] md:leading-[50px] lg:leading-[64px] lg:text-6xl md:text-5xl sm:text-4xl font-semibold">
-            All the recipes <br /> you'll{" "}
-            <h1 className="text-mainPink inline-block">ever </h1> need
+          <span   className="text-mainDark text-center sm:text-left leading-[34px] text-4xl sm:leading-[40px] md:leading-[50px] lg:leading-[64px]  md:text-5xl sm:text-4xl font-semibold">
+           Retrouvez les recettes dont vous avez   <br /> toujours{" "}
+            <h1 className="text-mainPink inline-block">rêvé </h1> 
           </span>
           <p className="font-light sm:text-left sm:text-2xl md:text-3xl my-4 text-center text-mainDark text-xl">
-            Compellingly empower client-based value after dynamic solutions.
-            Rapidiously pursue virtual leadership through.
+          Une collection de recettes salées et sucrées en un seul endroit
           </p>
           <div className="w-full mt-8 place-items-center  grid grid-cols-1 grid-rows-2 sm:grid-rows-1 sm:grid-cols-6 gap-1 lg:gap-4 ">
             <Link className="grid sm:col-span-2 w-full place-items-center" href="/recipes">

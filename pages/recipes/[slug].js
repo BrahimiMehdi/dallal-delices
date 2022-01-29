@@ -71,25 +71,30 @@ export default function RecipeDetails({ recipe }) {
             <h1 className="text-2xl z-10 text-center text-secondary-purple font-semibold">
               Ingredients
             </h1>
-            <div className="h-full z-10 pl-12 py-8 overflow-y-scroll border-4 border-secondary-purple border-dotted  pr-2 mt-2 rounded-xl scrollbar-hide">
+            <div className="h-full py-2 pb-4 border-secondary-purple border-4 pr-2 rounded-xl overflow-hidden border-dotted ">
+            <div className="h-full overflow-x-hidden scrollbar scrollbar-track-mainPurple scrollbar-thin scrollbar-thumb-white  z-10 pl-6 py-8 overflow-y-auto   pr-2 mt-2 rounded-xl ">
               <ul className="flex flex-col w-full h-full">
                 {recipe.ingredients.map((ingredient,index) => {
                   return (
                     <li key={index} className="text-xl font-light leading-12 mt-4 list-disc text-mainLight">
-                      <p>{ingredient}</p>
+                      {ingredient}
                     </li>
                   );
                 })}
               </ul>
+            </div>
             </div>
           </div>
           <div ref={mainContent} className="lg:col-span-9 py-8   flex lg:px-20 flex-col justify-around h-full w-full">
             <h1 className="text-4xl sm:text-5xl text-mainDark mb-8 font-bold capitalize">
               {recipe.title}
             </h1>
-            <p className="text-2xl overflow-y-scroll whitespace-pre-wrap leading-10 border-mainDark border-2 border-dashed rounded-xl px-4 py-8 scrollbar-hide text-mainDark">
+            <div className="h-full pb-4 border-mainDark border-4 pl-2 pr-4 rounded-xl overflow-hidden border-dotted">
+            <p className="h-full overflow-x-hidden scrollbar scrollbar-track-mainLight scrollbar-thin scrollbar-thumb-mainDark  z-10  pr-4 mt-2 rounded-xl text-xl overflow-y-scroll whitespace-pre-wrap leading-10 text-mainDark">
               {recipe.about}
             </p>
+            </div>
+            
           </div>
         </section>
       </main>

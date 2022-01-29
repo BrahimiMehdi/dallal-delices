@@ -10,8 +10,8 @@ const RecipeCard = ({ recipe }) => {
   const imageDimensions = getImageDimensions(recipe.imageUrl)
   
   return (
-    <div className="max-h-[400px] mb-2 pb-4 w-[90%] sm:w-[80%] lg:w-[300px] px-4 flex mt-4 justify-around flex-col pt-4 bg-mainLight rounded-2xl shadow-xl">
-
+    <div className="h-[400px] mb-2 pb-4 w-[90%] sm:w-[80%] lg:w-[300px] px-4 flex mt-4 justify-around flex-col pt-4 bg-mainLight rounded-2xl shadow-xl">
+      
       <Image
         width={imageDimensions.width}
         height={imageDimensions.height}
