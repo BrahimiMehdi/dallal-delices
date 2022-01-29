@@ -47,7 +47,7 @@ export default function Recipes({ recipes }) {
         <Head>
           <title>dallal delices</title>
           <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
+          <link rel="preconnect" href="https://fonts.gstatic.com" ccrossOrigin="true" />
           <link
             href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100;200;300;400;500;600;700;800;900&display=swap"
             rel="stylesheet"
@@ -77,9 +77,9 @@ export default function Recipes({ recipes }) {
               recipe
             </span>
             <div className="max-h-full gap-8 w-full row-span-5 lg:row-span-3 lg:flex-row lg:flex-wrap flex-col flex justify-center items-center lg:justify-around">
-              {renderSideBar ? recipes.map((recipe, index) => {
+              {recipes.map((recipe, index) => {
                 return <RecipeCard key={index} user={user} recipe={recipe} />;
-              }) : ""}
+              }) }
             </div>
           </div>
           <div className="min-h-screen w-screen absolute top-0 left-0 bottom-0 bg-opacity-60  bg-black"></div>
