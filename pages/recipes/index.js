@@ -73,7 +73,7 @@ export default function Recipes({ recipes }) {
           <div className="min-h-full z-10 w-[90%] place-items-center pb-8 pt-4 grid grid-rows-6 lg:grid-rows-4 grid-cols-1">
             <span className="text-5xl mt-4 sm:text-6xl row-span-1 font-semibold text-mainLight text-center">
               
-              Trouver vos  {" "}
+              Trouvez vos  {" "}
               <h1 className="text-mainPink inline-block">recettes</h1>{" "}
               préférées
             </span>
