@@ -43,6 +43,7 @@ export default function Home({ recipes }) {
     return (
       <main className="min-h-screen max-w-screen bg-white-texutre bg-cover bg-center flex flex-col">
         <Head>
+          <meta name="google-site-verification" content="o3T6fNvuftIHYN81rkJkdwmCmj4fDDikDpKqZci5K-0" />
           <title>dallal delices</title>
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
