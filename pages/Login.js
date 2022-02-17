@@ -10,6 +10,7 @@ const Login = () => {
   return (
     <main className="h-screen w-screen relative grid place-items-center ">
       <Head>
+           <meta name="google-site-verification" content="o3T6fNvuftIHYN81rkJkdwmCmj4fDDikDpKqZci5K-0" />
           <title>dallal delices</title>
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
